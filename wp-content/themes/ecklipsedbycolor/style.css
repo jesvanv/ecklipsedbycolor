@@ -1,0 +1,392 @@
+/*
+Theme Name: Ecklipsed
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+*/
+
+
+/* 
+Fonts
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Catamaran:400,700,500,600);
+@import url(http://fonts.googleapis.com/css?family=Rochester);
+@import url(https://fonts.googleapis.com/css?family=Codystar);
+@import url(https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre);
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+
+/* @import url(http://fonts.googleapis.com/css?family=Great+Vibes); */
+/*@import url(http://fonts.googleapis.com/css?family=Satisfy);*/
+
+
+
+/*
+
+Main stuff
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+    font: 1em "Catamaran", sans-serif;
+    background: #444;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: chocolate;
+    text-decoration: underline;
+}
+
+#secondary {
+    float: right;
+    width: 30%;
+    padding: 0;
+    margin: 0 15px;
+}
+
+#widget-area {
+    padding: 0 0 0 1em;
+    margin: 0;
+}
+
+#content,
+#primary,
+#main {
+    float: left;
+}
+
+#content {
+    max-width: 66%;
+    margin: 0 0 0 5px;
+}
+
+.site-main {
+    margin: 0;
+    padding: 0;
+}
+
+.site-title img {
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+}
+
+#widget-area > h2 {
+    margin: 0;
+    font: normal 3em "Rochester", serif;
+    color: #999;
+}
+
+.site-title {
+    font: normal 6rem "Codystar", sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 0 0 15px #FC0;
+}
+
+.post {
+    /*background-color: #CBF3DD;
+    border-radius: 10px 10px 10px 0px;*/
+    padding: 1em;
+    /*margin: 0 0 2em 0;*/
+    border-top: 1px solid black;
+    border-bottom: 1px solid gray;
+}
+
+.post p {
+    margin: 0.5em 0;
+    color: #AFF7AF;
+}
+
+.post a {
+    font-weight: bold;
+    color: #777;
+}
+
+.post img {
+    box-shadow: 0px 0px 5px 3px #333;
+    display: block;
+    clear: both;
+    /*border: 2px solid white;*/
+}
+
+.aligncenter {
+    margin: 25px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.entry-title {
+    font: bold 2em "Averia Gruesa Libre", serif;
+    margin: 0.1em 0 0.75em 0;
+    line-height: 1.2em;
+    color: #777;
+}
+
+.entry-title a {
+    color: #999;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.entry-title a:hover {
+    
+}
+
+.wooSig,
+.exoh {
+    font: 1.5em "Satisfy", serif;
+}
+
+.exoh {
+    color: darkred;
+}
+
+.cat-links,
+.posted-on {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.comments-link {
+    margin-left: 0.5em;
+}
+
+.comments-link a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+
+/**
+ * 16.0 Media Queries
+ */
+
+
+/*
+ * Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+
+/**
+ * 16.1 Mobile Large 620px
+ */
+
+@media screen and (min-width: 38.75em) {}
+
+
+/**
+ * 16.2 Tablet Small 740px
+ */
+
+@media screen and (min-width: 46.25em) {}
+
+
+/**
+ * 16.3 Tablet Large 880px
+ */
+
+@media screen and (min-width: 55em) {}
+
+
+/**
+ * 16.4 Desktop Small 955px
+ */
+
+@media screen and (min-width: 59.6875em) {}
+
+
+/**
+ * 16.5 Desktop Medium 1100px
+ */
+
+@media screen and (min-width: 68.75em) {}
+
+
+/**
+ * 16.6 Desktop Large 1240px
+ */
+
+@media screen and (min-width: 77.5em) {}
+
+
+/**
+ * 16.7 Desktop X-Large 1403px
+ */
+
+@media screen and (min-width: 87.6875em) {}
+
+
+/**
+ * 17.0 Print
+ */
+
+@media print {
+    body {
+        background: none !important;
+        /* Brute force since user agents all print differently. */
+        font-size: 11.25pt;
+    }
+    .secondary-toggle,
+    .navigation,
+    .page-links,
+    .edit-link,
+    #reply-title,
+    .comment-form,
+    .comment-edit-link,
+    .comment-list .reply a,
+    button,
+    input,
+    textarea,
+    select,
+    .widecolumn form,
+    .widecolumn .mu_register form {
+        display: none;
+    }
+    .site-header,
+    .site-footer,
+    .hentry,
+    .entry-footer,
+    .page-header,
+    .page-content,
+    .comments-area,
+    .widecolumn {
+        background: none !important;
+        /* Make sure color schemes dont't affect to print */
+    }
+    body,
+    blockquote,
+    blockquote cite,
+    blockquote small,
+    label,
+    a,
+    .site-title a,
+    .site-description,
+    .post-title,
+    .author-heading,
+    .entry-footer,
+    .entry-footer a,
+    .taxonomy-description,
+    .entry-caption,
+    .comment-author,
+    .comment-metadata,
+    .comment-metadata a,
+    .comment-notes,
+    .comment-awaiting-moderation,
+    .no-comments,
+    .site-info,
+    .site-info a,
+    .wp-caption-text,
+    .gallery-caption {
+        color: #000 !important;
+        /* Make sure color schemes don't affect to print */
+    }
+    pre,
+    abbr[title],
+    table,
+    th,
+    td,
+    .site-header,
+    .site-footer,
+    .hentry + .hentry,
+    .author-info,
+    .page-header,
+    .comments-area,
+    .comment-list + .comment-respond,
+    .comment-list article,
+    .comment-list .pingback,
+    .comment-list .trackback,
+    .no-comments {
+        border-color: #eaeaea !important;
+        /* Make sure color schemes don't affect to print */
+    }
+    .site {
+        margin: 0 7.6923%;
+    }
+    .sidebar {
+        position: relative !important;
+        /* Make sure sticky sidebar doesn't affect to print */
+    }
+    .site-branding {
+        padding: 0;
+    }
+    .site-header {
+        padding: 7.6923% 0;
+    }
+    .site-description {
+        display: block;
+    }
+    .hentry + .hentry {
+        margin-top: 7.6923%;
+    }
+    .hentry.has-post-thumbnail {
+        padding-top: 7.6923%;
+    }
+    .sticky-post {
+        background: #000 !important;
+        color: #fff !important;
+    }
+    .entry-header,
+    .entry-footer {
+        padding: 0;
+    }
+    .entry-content,
+    .entry-summary {
+        padding: 0 0 7.6923%;
+    }
+    .post-thumbnail img {
+        margin: 0;
+    }
+    .author-info {
+        margin: 0;
+    }
+    .page-content {
+        padding: 7.6923% 0 0;
+    }
+    .page-header {
+        padding: 3.84615% 0;
+    }
+    .comments-area {
+        border: 0;
+        padding: 7.6923% 0 0;
+    }
+    .site-footer {
+        margin-top: 7.6923%;
+        padding: 3.84615% 0;
+    }
+    .widecolumn {
+        margin: 7.6923% 0 0;
+        padding: 0;
+    }
+}
